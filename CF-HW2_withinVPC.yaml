@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: HW2 - This is my EC2 instance launched in a VPC with CloudFormation
+
+Resources:
+  Homework2EC2Instance: # logical name
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: "ami-09d3b3274b6c5d4aa" # ImageID valid only in us-east-1 region
+      InstanceType: "t2.micro"
+      KeyName: "awesome-key-east1"
+      AvailabilityZone: "us-east-1a"
+      SubnetId: "subnet-0f77c3039980b9b31"
+      Tags: 
+        - Key: "Name"
+          Value: "Rokshana-ec2-instance"

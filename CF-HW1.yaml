@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: HW1 - This is my first EC2 instance launched in default VPC with CloudFormation
+
+Resources:
+  Homework1EC2Instance: # logical name
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: "ami-017c001a88dd93847" # ImageID valid only in us-west-1 region
+      InstanceType: "t2.micro"
+      KeyName: "rokshana-us-west1"
+      AvailabilityZone: "us-west-1a"
+      Tags: 
+        - Key: "Name"
+          Value: "Rokshana-ec2-instance"
